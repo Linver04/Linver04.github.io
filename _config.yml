@@ -20,7 +20,7 @@ timezone: Asia/Shanghai
 
 title: Linver's blog # the main title
 
-tagline: 细推物理须行乐，何用浮名绊此身 # it will display as the sub-title
+tagline: stay hungry # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A self blog website.
@@ -32,7 +32,7 @@ github:
   username: Linver04 # change to your github username
 
 twitter:
-  username: ELLEN # change to your twitter username
+  username: twitter_username # change to your twitter username
 
 social:
   # Change to your full name.
@@ -73,10 +73,10 @@ theme_mode: dark # [light|dark]
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn: https://www.bootcdn.cn/
+img_cdn: "https://www.bootcdn.cn/"
 
 # the avatar on sidebar, support local or CORS resources
-avatar: "assets/img/avatar/tou.jpg"
+avatar: assets/img/tou.jpg
 
 # boolean type, the global switch for TOC in posts.
 toc: true
