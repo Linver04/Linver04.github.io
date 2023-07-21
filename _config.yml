@@ -20,7 +20,7 @@ timezone: Asia/Shanghai
 
 title: Linver's blog # the main title
 
-tagline: 细推物理须行乐,何用浮名绊此身 # it will display as the sub-title
+tagline: Rome is not built in a day # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
