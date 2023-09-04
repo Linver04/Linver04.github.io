@@ -12,7 +12,7 @@ pin: false #置顶帖子
 ---
 # [CF1866](https://mirror.codeforces.com/contest/1866)
 ## A - Ambitious Kid
-题意：每次操作能使数组一个数减1或加1，问最小操作数使 $a_1*a_2....*a_n=0$  
+题意：每次操作能使数组一个数减1或加1，问最小操作数使 $a_1 \cdot a_2 \cdot .... \cdot a_n=0$  
 思路：求最小绝对值
 ```C++
 void solve(){
@@ -35,8 +35,8 @@ $Y=c_1^{d_1}\cdot c_2^{d_2}\cdot......$
 利用 $LCM\cdot GCD=p\cdot q$ ，所以 $X\cdot Y=p\cdot q$  
 只需要求其中一个数有多少种可能，易想到第一个数为Y本身  
 设Z=X/Y,题目转化为从Z中取若干个质因数（包括次数）与Y相乘得到的数有多少种  
-假设Z有n个质因数，则种类为 $C^{0}_{n}+C^{1}_{n}+...+C^{n}_{n}=2^n$  
-用快速幂算 $2^n$ ，每次取模
+假设Z有n个质因数，则种类为   $C^{0}_{n}+C^{1}_{n}+...+C^{n}_{n}=2^n$     
+用快速幂算   $2^n$   ，每次取模
 ```c++
 struct node{
 	int a,b;
