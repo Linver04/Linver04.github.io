@@ -1,17 +1,18 @@
 ---
-title: CF1866题解
+title: CF1866题解(COMPFEST 15 - Preliminary Online Mirror (Unrated, ICPC Rules, Teams Preferred))
 author: Linver
 date: 2023-09-04 16:26:00 +0800 # 2022-01-01 13:14:15 +0800 只写日期也行；不写秒也行；这样也行 2022-03-09T00:55:42+08:00
 categories: [codeforces]
-tags: [数论, 二分查找, 斐波那契数列]     # TAG names should always be lowercase
+tags: [数论]     # TAG names should always be lowercase
 
 # 以下默认false
 math: true
 mermaid: true
 pin: false #置顶帖子
 ---
+# [CF1866](https://mirror.codeforces.com/contest/1866)
 ## A - Ambitious Kid
-题意：每次操作能使数组一个数减1或加1，问最小操作数使a1*a2....*an=0  
+题意：每次操作能使数组一个数减1或加1，问最小操作数使 $a_1*a_2....*a_n=0$  
 思路：求最小绝对值
 ```C++
 void solve(){
@@ -27,15 +28,15 @@ void solve(){
 ```
 ## B - Battling with Numbers
 题意：  
-X=$a_1^{b_1}\cdot a_2^{b_2}\cdot......$  
-Y=$c_1^{d_1}\cdot c_2^{d_2}\cdot......$  
-求多少对p,q使$LCM(p,q)=X,GCD(p,q)=Y$  
+$X=a_1^{b_1}\cdot a_2^{b_2}\cdot......$  
+$Y=c_1^{d_1}\cdot c_2^{d_2}\cdot......$  
+求多少对p,q使 $LCM(p,q)=X$    ,   $GCD(p,q)=Y$  
 思路：LCM必定大于等于GCD，X必定包含Y的质因数且指数比Y大，否则输出0  
-利用$LCM\cdot GCD=p\cdot q$，所以$X\cdot Y=p\cdot q$  
+利用 $LCM\cdot GCD=p\cdot q$ ，所以 $X\cdot Y=p\cdot q$  
 只需要求其中一个数有多少种可能，易想到第一个数为Y本身  
 设Z=X/Y,题目转化为从Z中取若干个质因数（包括次数）与Y相乘得到的数有多少种  
-假设Z有n个质因数，则种类为$C^{0}_{n}+C^{1}_{n}+...+C^{n}_{n}=2^n$  
-用快速幂算$2^n$，每次取模
+假设Z有n个质因数，则种类为 $C^{0}_{n}+C^{1}_{n}+...+C^{n}_{n}=2^n$  
+用快速幂算 $2^n$ ，每次取模
 ```c++
 struct node{
 	int a,b;
